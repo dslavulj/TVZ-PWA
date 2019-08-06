@@ -1,0 +1,26 @@
+<!--
+    Napišite HTML dokument koji se sastoji od polja za unos teksta (textarea) i gumba. Kada se klikne gumb, sve što je upisano u polje za unos teksta, treba se ispisati na stranici ispod njih.
+
+Za ispis koristite javascript funkciju, varijablu, innerHTML i jedan prazni <span> element
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="te" cols="30" rows="10"></textarea>
+    <button onclick="funkcija()">Prikazi poruku</button><br>
+    <span id="span"></span>
+</body>
+</html>
+
+<script>
+    function funkcija(){
+        document.getElementById("span").innerHTML= document.getElementById("te").value ;
+    }
+</script>

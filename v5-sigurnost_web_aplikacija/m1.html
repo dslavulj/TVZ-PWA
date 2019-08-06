@@ -1,0 +1,33 @@
+<!--
+    Potrebno je napraviti HTML dokument koji se sastoji od jedne slike.
+Ako se klikne na sliku treba se otvoriti popup obavijest koristeći javascript confirm() funkciju. Obavijest treba pitati "Želite li prikazati novu sliku".
+
+Ako se odabere da (yes) treba se prikazati druga slika.
+
+Napomena:
+
+Možete koristiti  document.write () kako bi ispisali novi html <img> element.
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="Slike/slika1.jpg" alt="" id="slika">
+</body>
+</html>
+
+<script>
+document.getElementById("slika").onclick = function(event){
+    var obavijest = confirm("Želite li prikazati novu sliku?");
+	if (obavijest==true){
+        document.write ("<img src='Slike/slika2.jpg'>");
+    }
+}
+</script>
